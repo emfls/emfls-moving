@@ -1,12 +1,21 @@
 # Tasks
 
-## Current
+## Current — Foundation & Search Launch
 
-Stage 2 — Minimal Astro Bootstrap
+- [x] Minimum site identity and six-phase moving timeline
+- [x] Canonical, metadata, trust pages, robots.txt, sitemap.xml, and custom 404 output
+- [x] IndexNow key endpoint and automated build-output checks
+- [x] Local Astro check, static build, foundation tests, and diff hygiene
+- [ ] Fixed-viewport browser QA
+- [ ] Update PROJECT_HISTORY and launch documentation
+- [ ] Commit and publish through the existing `main`/Cloudflare Pages flow
+- [ ] Confirm Production routes and real unknown-route 404 response
+- [ ] Search Console property and sitemap submission
+- [ ] Naver Search Advisor and sitemap submission
+- [ ] IndexNow POST accepted for live public URLs
+- [ ] Daum registration/status check and bounded blocker record
+- [ ] Site Registry and Handoff Index final state
 
-## Later
+## Deferred after cross-network foundation
 
-Site-specific work is controlled centrally through the EMFLS Network Work Queue
-and this site's Notion Site Control Page.
-
-Do not start later stages automatically.
+Deep moving guides, saved personal checklists, advanced tools, design polishing, and AdSense optimization follow the 100-site Foundation/Search Launch priority.

@@ -24,9 +24,12 @@ If instructions clearly belong to another EMFLS project, stop and report:
 6. Actual code
 7. Production
 
-## Current stage
+## Current execution contract
 
-Stage 2 establishes only the minimal runnable Astro + TypeScript static scaffold.
+The latest owner directive, `11 · PRIORITY OVERRIDE · 100-Site Foundation & Search Launch First`, takes precedence over the original Stage 2 bootstrap note and any later deep-content or polish phase. Complete the shared foundation and Search Launch gates for each numbered site before expanding advanced tools or extensive guides.
 
-Do not infer or invent the final design, content strategy, Cloudflare configuration,
-search activation, GA4, or AdSense configuration during this stage.
+For this site, follow the Notion Site Control Page for the mission, audience, boundaries, and design direction. Keep the moving timeline practical and date-based. Do not add legal/contract interpretation, vendor rankings, unsupported prices, personal-data collection, login, or analytics without a separately authorized plan.
+
+Record meaningful milestones in the Handoff Index child work page and Site Registry as they happen. If code changes, update `PROJECT_HISTORY.md`. Do not treat local checks as proof of Production, browser, Search Console, Naver, or IndexNow completion.
+
+Never modify another EMFLS repository from this checkout. Hard-stop only on account/login/2FA/CAPTCHA/approval, dangerous DNS, destructive actions, or network-wide architecture changes.

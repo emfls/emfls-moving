@@ -1,65 +1,108 @@
 ---
-const siteName = 'emfls-moving';
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const title = '이사 준비를 날짜의 흐름으로 | EMFLS Moving';
+const description = '이사 날짜 전후로 해야 할 일을 D-30부터 첫 주까지 시간순으로 정리한 실용적인 준비 안내입니다.';
+
+const phases = [
+  {
+    day: 'D-30',
+    label: '날짜와 범위',
+    summary: '이사 날짜를 중심으로 필요한 일정과 도움을 정리합니다.',
+    actions: ['이사 날짜와 열쇠 인계 시간을 확인합니다.', '옮길 물건과 직접 처리할 일을 구분합니다.', '예약이나 변경이 필요한 일정을 먼저 확인합니다.'],
+  },
+  {
+    day: 'D-14',
+    label: '예약과 정리',
+    summary: '시간이 필요한 준비부터 확인하고 짐을 나눠 둡니다.',
+    actions: ['관련 기관과 서비스의 이용 조건을 직접 확인합니다.', '기부·양도·폐기할 물건을 분류합니다.', '방별로 포장할 순서를 정합니다.'],
+  },
+  {
+    day: 'D-7',
+    label: '포장과 확인',
+    summary: '자주 쓰지 않는 물건부터 포장하고 남은 일정을 살핍니다.',
+    actions: ['계절용품과 책처럼 당장 쓰지 않을 물건을 포장합니다.', '상자마다 방 이름과 내용 범주를 표시합니다.', '주소 변경이나 방문 일정은 해당 기관에 확인합니다.'],
+  },
+  {
+    day: 'D-1',
+    label: '마지막 점검',
+    summary: '당일 바로 필요한 물건과 이동 동선을 따로 챙깁니다.',
+    actions: ['약, 충전기, 세면도구, 갈아입을 옷을 별도 가방에 둡니다.', '열쇠, 출입 방법과 연락할 사람을 다시 확인합니다.', '냉장고와 세탁기 등 준비가 필요한 가전 안내를 확인합니다.'],
+  },
+  {
+    day: '이사 당일',
+    label: '이동과 인계',
+    summary: '출발 전후 공간을 차분히 확인하고 새 집의 필수품을 풉니다.',
+    actions: ['출발 전 남은 물건과 문·창문을 확인합니다.', '도착 후 파손·작동 문제는 관련 업체에 바로 전달합니다.', '침구와 기본 생활용품부터 꺼냅니다.'],
+  },
+  {
+    day: 'D+1–7',
+    label: '첫 주 정착',
+    summary: '생활에 필요한 공간부터 정리하고 미뤄 둔 확인을 마칩니다.',
+    actions: ['잠자리, 욕실, 주방 순서로 필요한 짐을 풉니다.', '제품 사용법과 보증 정보는 제조사 안내를 확인합니다.', '불편한 점과 남은 정리 일정을 짧게 기록합니다.'],
+  },
+];
 ---
 
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+<SiteLayout title={title} description={description}>
+  <section class="hero" aria-labelledby="hero-heading">
+    <div>
+      <p class="eyebrow">MOVE, ONE STEP AT A TIME</p>
+      <h1 id="hero-heading">짐보다 먼저,<br />일정부터 정리하세요.</h1>
+      <p class="hero-copy">이사 날짜가 정해졌다면 준비할 일도 시간순으로 볼 수 있어요. 한 번에 다 하려 하지 말고, 오늘 확인할 다음 단계부터 살펴보세요.</p>
+      <div class="hero-actions">
+        <a class="button-primary" href="#timeline">이사 타임라인 보기 <span aria-hidden="true">↓</span></a>
+        <a class="text-link" href="/about/">EMFLS Moving 소개</a>
+      </div>
+      <p class="hero-footnote">모든 항목은 일반적인 참고용입니다. 일정과 조건은 각 기관 및 서비스 제공자에게 확인하세요.</p>
+    </div>
 
-    <!--
-      Stage 2 bootstrap protection:
-      Keep this site out of search indexes until later launch stages.
-    -->
-    <meta name="robots" content="noindex, nofollow" />
+    <aside class="phase-board" aria-label="이사 준비 여섯 단계">
+      <div class="board-heading"><span>THE MOVING PLAN</span><span>6 PHASES</span></div>
+      <ol class="board-phases">
+        {phases.map((phase, index) => (
+          <li>
+            <span class="board-number">0{index + 1}</span>
+            <span><span class="board-day">{phase.day}</span><span class="board-task">{phase.label}</span></span>
+          </li>
+        ))}
+      </ol>
+    </aside>
+  </section>
 
-    <title>{siteName}</title>
+  <section class="section-block" id="timeline" aria-labelledby="timeline-heading">
+    <div class="section-heading">
+      <div><p class="eyebrow">YOUR MOVING TIMELINE</p><h2 id="timeline-heading">날짜에 맞춰,<br />하나씩 준비하기</h2></div>
+      <p>정해진 순서가 모두에게 똑같이 맞지는 않습니다. 이사 범위와 남은 시간에 맞춰 필요한 항목만 골라 보세요.</p>
+    </div>
+    <ol class="timeline-grid">
+      {phases.map((phase, index) => (
+        <li class="timeline-card">
+          <div class="phase-tag"><span>{phase.day}<small>PHASE 0{index + 1}</small></span></div>
+          <div>
+            <h3>{phase.label}</h3>
+            <p>{phase.summary}</p>
+            <ul>{phase.actions.map((action) => <li>{action}</li>)}</ul>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
 
-    <meta
-      name="description"
-      content="EMFLS network site bootstrap. Site-specific information architecture, content, and design will be added in later stages."
-    />
-  </head>
+  <section class="section-block" aria-labelledby="method-heading">
+    <div class="section-heading">
+      <div><p class="eyebrow">A CALMER WAY TO PLAN</p><h2 id="method-heading">복잡한 준비를<br />작은 결정으로 나눕니다.</h2></div>
+      <p>이 안내는 개인 주소나 계약 내용을 받지 않습니다. 필요한 정보는 해당 기관과 서비스에 직접 확인해 안전하게 계획하세요.</p>
+    </div>
+    <ol class="method-grid">
+      <li><h3>날짜를 기준으로 보기</h3><p>오늘을 기준으로 남은 시간을 가늠하고, 먼저 결정해야 할 일을 구분합니다.</p></li>
+      <li><h3>공간별로 나누기</h3><p>방과 물건 범주를 나눠 포장하면 새 집에서 필요한 것을 찾기 쉽습니다.</p></li>
+      <li><h3>공식 정보 확인하기</h3><p>예약, 주소 변경, 서비스 조건은 변할 수 있으니 담당 기관이나 제공자에게 확인합니다.</p></li>
+    </ol>
+  </section>
 
-  <body>
-    <main>
-      <p>EMFLS</p>
-      <h1>{siteName}</h1>
-      <p>
-        This site is in its initial technical bootstrap stage.
-      </p>
-    </main>
-  </body>
-</html>
-
-<style>
-  :global(*) {
-    box-sizing: border-box;
-  }
-
-  :global(html) {
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      sans-serif;
-    background: #f7f7f5;
-    color: #181818;
-  }
-
-  :global(body) {
-    margin: 0;
-  }
-
-  main {
-    width: min(42rem, calc(100% - 2rem));
-    margin: 0 auto;
-    padding: 6rem 0;
-  }
-
-  p {
-    line-height: 1.7;
-  }
-</style>
+  <section class="notice-panel" aria-labelledby="boundary-heading">
+    <h2 id="boundary-heading">준비 순서 안내와<br />전문 판단은 다릅니다.</h2>
+    <p>EMFLS Moving은 일반적인 일정과 정리 순서를 제안합니다. 임대차·법률 문제, 세금, 대출, 분쟁 또는 업체 추천은 제공하지 않습니다. 계약이나 신청의 기준은 담당 기관 또는 자격 있는 전문가에게 확인하세요.</p>
+  </section>
+</SiteLayout>

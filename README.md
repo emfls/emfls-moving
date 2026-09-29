@@ -4,11 +4,14 @@ EMFLS Network site repository.
 
 - Site No.: 15
 - Repository: `emfls/emfls-moving`
-- Planned domain: `https://moving.emfls.com/`
+- Production domain: `https://moving.emfls.com/`
 - Framework: Astro + TypeScript
 - Output: Static
-- Current build stage: Stage 2 — Minimal Bootstrap
-- Search indexing: Disabled while the site is thin
+- Current priority: 100-Site Foundation & Search Launch
+- Public experience: Korean moving timeline from D-30 through the first week
+- Foundation routes: `/`, `/about/`, `/editorial-policy/`, `/privacy/`, `/contact/`
+- Search files: `/robots.txt`, `/sitemap.xml`, and the site-specific IndexNow verifier
 
-Site-specific information architecture, visual identity, content, production infrastructure,
-and search launch are handled in later EMFLS stages.
+The page gives general, adaptable planning prompts. It does not provide legal or contract advice,
+vendor rankings, unverified pricing, or personal schedule storage. Search and Production completion
+are tracked in the EMFLS Site Registry and this repository's `LAUNCH_CHECKLIST.md`.

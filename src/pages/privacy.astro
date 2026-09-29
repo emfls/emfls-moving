@@ -1,0 +1,20 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const title = '개인정보 안내 | EMFLS Moving';
+const description = 'EMFLS Moving 웹사이트가 현재 제공하는 기능과 개인정보 처리 범위를 안내합니다.';
+---
+
+<SiteLayout title={title} description={description}>
+  <header class="page-heading">
+    <p class="eyebrow">PRIVACY</p>
+    <h1>필요한 정보만,<br />명확하게 안내합니다.</h1>
+    <p class="lead">이 페이지는 2026년 9월 30일 현재 공개된 EMFLS Moving 기능의 개인정보 범위를 설명합니다.</p>
+  </header>
+  <div class="prose">
+    <section><h2>현재 사이트 기능</h2><p>현재 페이지에는 문의 폼, 계정, 댓글, 체크리스트 저장, 브라우저 저장소, 광고 또는 분석 기능이 없습니다. 이 사이트는 방문자가 주소·계약번호·신분정보·이사 일정을 입력하거나 이 사이트에 저장하도록 요구하지 않습니다.</p></section>
+    <section><h2>외부 서비스로 이동하는 링크</h2><p>문의 링크를 선택하면 기본 이메일 앱이 열릴 수 있습니다. 이메일을 보내는 경우 메시지와 첨부 내용은 이메일 수신자 및 이메일 제공자에게 전달되므로, 필요하지 않은 주소·계약·신분 정보를 포함하지 마세요.</p></section>
+    <section><h2>호스팅 요청 처리</h2><p>페이지를 제공하는 호스팅·네트워크 서비스는 웹 요청을 처리할 수 있습니다. 기술적 요청 정보의 수집과 보관은 해당 서비스 제공자의 정책을 따릅니다. 이 사이트의 자체 입력 기능과 호스팅 서비스의 운영 처리는 구분됩니다.</p></section>
+    <section><h2>기능이 바뀌는 경우</h2><p>향후 입력, 저장, 분석 또는 광고 기능을 추가하면 공개 전에 이 안내와 해당 기능의 처리 범위를 함께 갱신합니다. 개인정보 문의는 <a href="/contact/">문의 페이지</a>를 확인하세요.</p></section>
+  </div>
+</SiteLayout>
